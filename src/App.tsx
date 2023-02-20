@@ -5,7 +5,7 @@ import {
   Input,
   MantineProvider,
   Paper,
-  Text,
+  Title,
 } from "@mantine/core";
 import PokeList from "./components/PokeList";
 
@@ -15,7 +15,7 @@ function App() {
       <Container py={200}>
         <Paper sx={{ padding: "8px" }} shadow="xl">
           <Center>
-            <Text>Search Your Pokemoon</Text>
+            <Title>Search Your Pokemoon</Title>
           </Center>
           <Input
             placeholder="Type here.."
