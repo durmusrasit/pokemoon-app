@@ -7,6 +7,7 @@ import {
   Paper,
   Text,
 } from "@mantine/core";
+import PokeList from "./components/PokeList";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             rightSection={<Button>Search</Button>}
             rightSectionWidth={-1}
           />
+          <PokeList />
         </Paper>
       </Container>
     </MantineProvider>
