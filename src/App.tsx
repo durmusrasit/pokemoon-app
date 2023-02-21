@@ -1,12 +1,11 @@
 import {
-  Button,
   Center,
   Container,
-  Input,
   MantineProvider,
   Paper,
   Title,
 } from "@mantine/core";
+import SearchPoke from "./components/SearchPoke";
 import PokeList from "./components/PokeList";
 
 function App() {
@@ -17,12 +16,7 @@ function App() {
           <Center>
             <Title style={{ marginBottom: 7 }}>Search Your Pokemoon</Title>
           </Center>
-          <Input
-            style={{ marginBottom: 7 }}
-            placeholder="Type here.."
-            rightSection={<Button>Search</Button>}
-            rightSectionWidth={-1}
-          />
+          <SearchPoke />
           <PokeList />
         </Paper>
       </Container>
