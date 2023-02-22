@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Input } from "@mantine/core";
 
 const SearchPoke = () => {
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState<string>("");
 
   const handleSearchText = (event: React.ChangeEvent<HTMLInputElement>) =>
     setSearchText(event.target.value);
