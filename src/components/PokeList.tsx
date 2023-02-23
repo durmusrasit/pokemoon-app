@@ -1,8 +1,16 @@
 import { Table } from "@mantine/core";
+import { useSearchPokeNameContext } from "../contexts/SearchPokeNameContext";
+import { IPokemoonData } from "../types";
 
 const PokeList = () => {
+  const { searchPokeName } = useSearchPokeNameContext();
+
+  const pokeNameFilterCallback = (poke: IPokemoonData) =>
+    poke.name.toLowerCase().includes(searchPokeName);
+
   const pokes = [
     { name: "Abc", height: 63, weight: 3.2, types: ["def", "ghi"] },
+    { name: "Def", height: 36, weight: 2.3, types: ["xyz", "abc"] },
   ];
 
   const ths = (
@@ -14,7 +22,7 @@ const PokeList = () => {
     </tr>
   );
 
-  const rows = pokes.map((poke, index) => (
+  const rows = pokes.filter(pokeNameFilterCallback).map((poke, index) => (
     <tr key={index}>
       <th>{poke.name}</th>
       <th>{poke.height}</th>
