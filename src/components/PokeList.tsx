@@ -1,9 +1,10 @@
 import { Table } from "@mantine/core";
-import { useSearchPokeNameContext } from "../contexts/SearchPokeNameContext";
+import { useAtomValue } from "jotai";
 import { IPokemoonData } from "../types";
+import { SearchPokeNameAtom } from "./SearchPokeName";
 
 const PokeList = () => {
-  const { searchPokeName } = useSearchPokeNameContext();
+  const searchPokeName = useAtomValue(SearchPokeNameAtom);
 
   const pokeNameFilterCallback = (poke: IPokemoonData) =>
     poke.name.toLowerCase().includes(searchPokeName);

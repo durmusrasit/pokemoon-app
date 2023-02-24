@@ -7,7 +7,6 @@ import {
 } from "@mantine/core";
 import SearchPokeName from "./components/SearchPokeName";
 import PokeList from "./components/PokeList";
-import { SearchPokeNameContextProvider } from "./contexts/SearchPokeNameContext";
 
 function App() {
   return (
@@ -17,10 +16,8 @@ function App() {
           <Center>
             <Title style={{ marginBottom: 7 }}>Search Your Pokemoon</Title>
           </Center>
-          <SearchPokeNameContextProvider>
-            <SearchPokeName />
-            <PokeList />
-          </SearchPokeNameContextProvider>
+          <SearchPokeName />
+          <PokeList />
         </Paper>
       </Container>
     </MantineProvider>

@@ -1,9 +1,11 @@
 import React from "react";
 import { Button, Input } from "@mantine/core";
-import { useSearchPokeNameContext } from "../contexts/SearchPokeNameContext";
+import { atom, useAtom } from "jotai";
+
+export const SearchPokeNameAtom = atom<string>("");
 
 const SearchPokeName = () => {
-  const { searchPokeName, setSearchPokeName } = useSearchPokeNameContext();
+  const [searchPokeName, setSearchPokeName] = useAtom(SearchPokeNameAtom);
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) =>
     setSearchPokeName(event.target.value);

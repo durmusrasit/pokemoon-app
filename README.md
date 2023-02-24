@@ -6,6 +6,7 @@ Pokemoon search app
 
 - [React](https://reactjs.org/)
 - [Mantine UI](https://ui.mantine.dev/)
+- [Jotai](https://jotai.org/)
 
 ## Available Scripts
 
